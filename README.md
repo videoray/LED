@@ -23,5 +23,5 @@ Header file defining the custom specific responses that the thruster supports
 Text file address map showing all addresses and datum sizes in the CSR
 
 ***LED.py<br>***
-Python example of typical thruster usage
+Python example of typical LED usage
 
