@@ -1,0 +1,78 @@
+CSR: 
+0x0	 float LED_bank_1_setpoint_target;           // pwr percentage 0 - 1  (RW)
+0x4	 float LED_bank_2_setpoint_target;           // pwr percentage 0 - 1  (RW)
+0x8	 float LED_bank_3_setpoint_target;           // pwr percentage 0 - 1  (RW)
+0xc	 float bus_v;                // volts        (R)
+0x10	 float bus_i;                // amps         (R)
+0x14	 float temp;                 // deg C        (R)
+0x18	 uint32_t fault;             // fault flags  (R)
+0x1c	 float LED_bank_1_setpoint_actual;           // pwr percentage 0 - 1  (RW)
+0x20	 float LED_bank_2_setpoint_actual;           // pwr percentage 0 - 1  (RW)
+0x24	 float LED_bank_3_setpoint_actual;           // pwr percentage 0 - 1  (RW)
+ 
+0x28	 RESERVED
+ 
+0x4c	 uint16_t led_ID;                // ordinal  (RW)
+ 
+0x4e	 RESERVED
+ 
+0x50	 uint8_t system_flags;       // Bitfield     (RW)
+ 
+0x51	 RESERVED
+ 
+0x54	 uint32_t fault_interlock;      // password (RW)
+ 
+0x58	 RESERVED
+ 
+0x60	 uint8_t control_flags;            // Bitfield     (RW)
+0x61	 uint8_t led_bank_count;            // count       (RW)
+ 
+0x62	 RESERVED
+ 
+0x64	 float    LED_bank_1_power_rating;       // Watts        (RW)
+0x68	 float    LED_bank_2_power_rating;       // Watts        (RW)
+0x6c	 float    LED_bank_3_power_rating;       // Watts        (RW)
+0x70	 float    LED_bank_1_pwm_freq;           // Hz           (RW)
+0x74	 float    RESERVED_LED_bank_2_pwm_freq;
+0x78	 float    RESERVED_LED_bank_3_pwm_freq;
+0x7c	 uint8_t  LED_bank_1_setpoint_limit_min; //percentage 0 - 100 (RW)
+0x7d	 uint8_t  LED_bank_2_setpoint_limit_min; //percentage 0 - 100 (RW)
+0x7e	 uint8_t  LED_bank_3_setpoint_limit_min; //percentage 0 - 100 (RW)
+0x7f	 uint8_t  LED_bank_1_setpoint_limit_max; //percentage 0 - 100 (RW)
+0x80	 uint8_t  LED_bank_2_setpoint_limit_max; //percentage 0 - 100 (RW)
+0x81	 uint8_t  LED_bank_3_setpoint_limit_max; //percentage 0 - 100 (RW)
+ 
+0x82	 RESERVED
+ 
+0xa0	 uint32_t fault_control;              // flag     (RW)
+0xa4	 uint8_t undervoltage_trigger;        // volts    (RW)
+0xa5	 uint8_t overvoltage_trigger;         // volts    (RW)
+0xa6	 uint8_t overcurrent_trigger;         // amps     (RW)
+0xa7	 uint8_t temp_trigger;                // deg C    (RW)
+ 
+0xa8	 RESERVED
+ 
+0xac	 uint32_t undervoltage_err_cnt;       // count    (R)
+0xb0	 uint32_t overvoltage_err_cnt;        // count    (R)
+0xb4	 uint32_t overcurrent_err_cnt;        // count    (R)
+0xb8	 uint32_t temp_err_cnt;               // count    (R)
+ 
+0xbc	 RESERVED
+ 
+0xd8	 uint32_t comms_sync1_err_cnt;          // count (R)
+0xdc	 uint32_t comms_sync2_err_cnt;          // count (R)
+0xe0	 uint32_t comms_headerxsum_err_cnt;     // count (R)
+0xe4	 uint32_t comms_overrun_err_cnt;        // count (R)
+0xe8	 uint32_t comms_payloadxsum_err_cnt;    // count (R)
+0xec	 uint16_t comms_err_flag;
+0xee	 uint16_t save_settings;                // code (W)
+0xf0	 uint32_t  custom_command;       //  (W)  Special Register
+0xf4	 uint32_t  FACTORY_SERVICE_DATA; //  (R)  Device specific service data
+0xf8	 uint16_t  CONFIG_DATA_SIZE;     //  (R)
+0xfa	 uint8_t   CONFIG_DATA;          //  (R)  Special Register
+0xfb	 uint8_t   FIRMWARE_VERSION;     //  (R)  Special Register
+0xfc	 uint8_t   NODE_ID;              //  (RW) Special Register
+0xfd	 uint8_t   GROUP_ID;             //  (RW) Special Register
+0xfe	 uint16_t  UTILITY;              //  (W)  Special Register
+Size:	 256
+Excess:	 0  bytes
